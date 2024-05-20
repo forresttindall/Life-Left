@@ -7,6 +7,7 @@ form.addEventListener('submit', (e) => {
     const gender = document.getElementById('gender').value;
     const smoker = document.getElementById('smoker').value === 'yes';
     const country = document.getElementById('country').value;
+    document.getElementById('life-left-form').style.display = 'none';
 
     let lifeExpectancy;
     if (gender === 'male' && smoker) {
@@ -23,9 +24,15 @@ form.addEventListener('submit', (e) => {
     const percentage = (lifeLeft / lifeExpectancy) * 100;
     let counter = 0;
 
-    setInterval(() => {
-        counter += 0.0001;
+    setTimeout(() => {
+        counter += 0.0000001;
         const remainingPercentage = percentage - counter;
-        resultDiv.innerHTML = `You have ${remainingPercentage.toFixed(4)}% of your life left.`;
-    }, 2284); // Update every 2284ms
+        resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
+      }, 0);
+      
+      setInterval(() => {
+        counter += 0.0000001;
+        const remainingPercentage = percentage - counter;
+        resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
+      }, 2284); // Update every 2284ms
 });
