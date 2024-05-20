@@ -59,7 +59,20 @@ button[type="submit"] {
 }
 
 @media screen and (min-width: 1500px) {
+    
+}
+
+@media screen and (max-width: 800px) {
     form {
-    width: 40%
+        width: 90%
+    }
+
+    #result {
+        font-size: 55px;
+        margin: 40px;
+    }
+
+    body {
+        margin-top: 40px;
     }
 }
