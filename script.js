@@ -39,8 +39,8 @@ form.addEventListener('submit', (e) => {
         resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
       }, 2284); // Update every 2284ms
       
-});
 
-document.getElementById("submit").addEventListener("click", function() {
-    document.getElementById("hidden-element").style.display = "block"; /* show the element when the submit button is pressed */
-  });
+        setTimeout(() => {
+         document.getElementById("hidden-element").style.display = "block"; /* show the element after 5 seconds */
+        }, 5000); // 5000 milliseconds = 5 seconds
+});
