@@ -76,3 +76,7 @@ button[type="submit"] {
         margin-top: 40px;
     }
 }
+
+#hidden-element{
+    display: none;
+}
