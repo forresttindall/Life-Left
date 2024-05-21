@@ -9,6 +9,9 @@ form.addEventListener('submit', (e) => {
     const country = document.getElementById('country').value;
     document.getElementById('life-left-form').style.display = 'none';
 
+    
+
+
     let lifeExpectancy;
     if (gender === 'male' && smoker) {
         lifeExpectancy = 60.2;
@@ -35,4 +38,9 @@ form.addEventListener('submit', (e) => {
         const remainingPercentage = percentage - counter;
         resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
       }, 2284); // Update every 2284ms
+      
 });
+
+document.getElementById("submit").addEventListener("click", function() {
+    document.getElementById("hidden-element").style.display = "block"; /* show the element when the submit button is pressed */
+  });
