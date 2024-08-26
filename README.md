@@ -1,6 +1,7 @@
 # Life Left
 
 ## A Web-Based Life Expectancy Calculator
+[Live Demo](https://forresttindall.github.io/Life-Left/)
 
 ## Overview
 Life Left is a web-based application that calculates a user's estimated life expectancy based on various factors, providing a real-time countdown and inspirational quote to motivate users to make the most of their time.
