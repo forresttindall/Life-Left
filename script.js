@@ -73,6 +73,16 @@ form.addEventListener('submit', (e) => {
         } else if (gender === 'female' && !smoker) {
             lifeExpectancy = 72.5;
         }
+    } else if (country === 'Sweden') {
+        if (gender === 'male' && smoker) {
+            lifeExpectancy = 79;
+        } else if (gender === 'male' && !smoker) {
+            lifeExpectancy = 81.8;
+        } else if (gender === 'female' && smoker) {
+            lifeExpectancy = 81;
+        } else if (gender === 'female' && !smoker) {
+            lifeExpectancy = 84.7;
+        }
     }
 
     const lifeLeft = lifeExpectancy - age;
