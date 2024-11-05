@@ -36,6 +36,8 @@ label {
 
 input, select {
     width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
     border: none;
     background-color: rgb(45, 45, 45);
     color: lightgray;
@@ -45,7 +47,7 @@ input, select {
 
 select {
     height: 40px;
-   
+    padding-right: 25px;
 }
 
 input {
