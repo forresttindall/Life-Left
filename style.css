@@ -41,8 +41,16 @@ input, select {
     border: none;
     background-color: rgb(45, 45, 45);
     color: lightgray;
-    height: 25px;
+    height: 40px;
     font-size: 12px;
+}
+
+select {
+    height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 25px;
 }
 
 input {
