@@ -87,20 +87,19 @@ form.addEventListener('submit', (e) => {
 
     const lifeLeft = lifeExpectancy - age;
     const percentage = (lifeLeft / lifeExpectancy) * 100;
-    let counter = 0;
+    
+    // Calculate how much percentage passes per second
+    // (100% / (life expectancy in seconds))
+    const percentPerSecond = 100 / (lifeExpectancy * 365 * 24 * 60 * 60);
+    const startTime = Date.now();
 
-    setTimeout(() => {
-        counter += 0.0000001;
-        const remainingPercentage = percentage - counter;
+    // Update every 100ms for smooth animation
+    setInterval(() => {
+        const secondsElapsed = (Date.now() - startTime) / 1000;
+        const percentagePassed = percentPerSecond * secondsElapsed;
+        const remainingPercentage = percentage - percentagePassed;
         resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
-      }, 0);
-      
-      setInterval(() => {
-        counter += 0.0000001;
-        const remainingPercentage = percentage - counter;
-        resultDiv.innerHTML = `${remainingPercentage.toFixed(7)}%`;
-      }, 2284); // Update every 2284ms
-      
+    }, 100);
 
         setTimeout(() => {
          document.getElementById("hidden-element").style.display = "block"; /* show the element after 5 seconds */
